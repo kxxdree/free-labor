@@ -249,6 +249,10 @@ main {
   color: #191135cc;
 }
 
+.hh-link {
+  margin: 0;
+}
+
 .contacts {
   padding: 2.5rem 0;
 }
