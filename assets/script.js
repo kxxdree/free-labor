@@ -68,3 +68,22 @@ for (let i = 0; i < vacancies.length; i++) {
 
   document.querySelector(".vacancies-list").appendChild(vacancyStack);
 }
+
+const email = document.querySelector(".contacts-email");
+email.addEventListener("click", (e) => {
+  e.target.innerHTML = "Скопировано";
+});
+
+const phone = document.querySelector(".contacts-phone");
+phone.addEventListener("click", (e) => {
+  e.target.innerHTML = "Скопировано";
+});
+
+setInterval(() => {
+  if (phone.innerHTML === "Скопировано") {
+    phone.innerHTML = "+7 (900) 600 10 42";
+  }
+  if (email.innerHTML === "Скопировано") {
+    email.innerHTML = "dr_lipetsk@admlr.lipetsk.ru";
+  }
+}, 3000);
