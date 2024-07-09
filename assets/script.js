@@ -69,15 +69,18 @@ for (let i = 0; i < vacancies.length; i++) {
   document.querySelector(".vacancies-list").appendChild(vacancyStack);
 }
 
+function copyText(elem) {
+  elem.addEventListener("click", (e) => {
+    navigator.clipboard.writeText(e.target.innerHTML);
+    e.target.innerHTML = "Скопировано";
+  });
+}
+
 const email = document.querySelector(".contacts-email");
-email.addEventListener("click", (e) => {
-  e.target.innerHTML = "Скопировано";
-});
+copyText(email);
 
 const phone = document.querySelector(".contacts-phone");
-phone.addEventListener("click", (e) => {
-  e.target.innerHTML = "Скопировано";
-});
+copyText(phone);
 
 setInterval(() => {
   if (phone.innerHTML === "Скопировано") {
