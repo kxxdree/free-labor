@@ -6,14 +6,24 @@
 
 html {
   scroll-behavior: smooth;
-  font-size: 1vw;
+}
+
+@media (max-width: 1439px) {
+  html {
+    font-size: 1.1vw;
+  }
+}
+
+@media (min-width: 1920px) {
+  html {
+    font-size: 1vw;
+  }
 }
 
 body {
   background-color: #fefbff;
   font-family: "Geologica", sans-serif;
   color: #191135;
-  max-width: 90rem;
   margin: auto;
 }
 
@@ -21,8 +31,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1.25rem 0;
-  margin-bottom: 4rem;
+  padding: 1.25rem 6rem;
 }
 
 nav {
@@ -34,6 +43,10 @@ nav {
   text-decoration: none;
   line-height: 1.5rem;
   color: #191135;
+}
+
+main {
+  padding: 4rem 6rem;
 }
 
 .purchases-title-container {
@@ -87,17 +100,13 @@ nav {
   text-align: center !important;
 }
 
-.footer-border {
-  border: 1px solid #1911351a;
-}
-
 footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 2.5rem 6rem;
-  max-width: 90rem;
   margin: auto;
   font-family: "Geologica", sans-serif;
   color: #191135;
+  border-top: 1px solid #1911351a;
 }
