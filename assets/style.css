@@ -138,7 +138,7 @@ main {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
 }
 
 .block-uptitle {
@@ -208,7 +208,7 @@ main {
 .vacancies-list-items {
   display: flex;
   flex-direction: column;
-  max-width: 48rem;
+  width: 48rem;
   gap: 1rem;
 }
 
@@ -227,7 +227,12 @@ main {
   line-height: 1.4;
 }
 
-.vacancy-about {
+.vacancy-req-list {
+  padding: 0 2rem;
+  list-style-type: disc;
+}
+
+.vacancy-req {
   font-weight: 200;
   font-size: 1rem;
   line-height: 1.25;

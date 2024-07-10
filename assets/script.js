@@ -2,48 +2,34 @@ const vacancies = [
   {
     stackTitle: "Машинное обучение",
     stackDescription: "Разработка моделей машинного обучения",
-    vacancyName: "ML Engineer / Data Scientist",
-    vacancyAbout: "Мы ищем Junior-level ML-инженера. Обязательно понимание основ машинного обучения и знание современных архитектур нейронных сетей",
-  },
-  {
-    stackTitle: "",
-    stackDescription: " ",
-    vacancyName: "Senior ML Engineer (Computer Vision)",
-    vacancyAbout:
-      "Имеет опыт работы в качестве ML Engineer или CV Engineer от 3 лет и опыт обучения production ready GAN моделей, обладает отличным математическим бэкграундом - линейная алгебра, теория вероятностей, мат. анализ, идеально знает Pytorch, numpy, opencv",
+    vacancyName: "ML Engineer",
+    vacancyRequirements: ["Опыт работы от 3х лет", "Глубокое понимание Python, FastAPI и PostgreSQL", "Опыт работы с Docker"],
   },
   {
     stackTitle: "Frontend-разработка",
     stackDescription: "Создание интерфейсов веб-сайтов и приложений",
-    vacancyName: "Frontend-разработчик (React, Next.js)",
-    vacancyAbout:
-      " Разработка и поддержка High-Load фронтендов на React/Next.js, вёрстка дизайна и компонентов, знание React, Next.js, TypeScript, JavaScript, понимание микросервисного подхода, умение использовать паттерны только там, где это необходимо",
+    vacancyName: "Frontend-разработчик",
+    vacancyRequirements: ["Опыт работы от 3х лет", "Глубокое понимание Python, FastAPI и PostgreSQL", "Опыт работы с Docker"],
   },
-  {
-    stackTitle: "",
-    stackDescription: "",
-    vacancyName: "Frontend-разработчик (Vue.js)",
-    vacancyAbout: " Понимание семантики супер важно, уверенные знания и опыт работы с Vue.js, опыт работы на чистом JavaScript от 3 лет",
-  },
+
   {
     stackTitle: "Backend-разработка",
-    stackDescription: "Создание интерфейсов веб-сайтов и приложений",
-    vacancyName: "Разработка бизнес-логики продукта",
-    vacancyAbout:
-      "Знание C++17 и STL, от 3-х лет опыта коммерческой разработки, опыт работы с высоконагруженными системами, микросервисной архитектурой и Docker",
+    stackDescription: "Разработка бизнес-логики продукта",
+    vacancyName: "Backend-разработчик",
+    vacancyRequirements: ["Опыт работы от 3х лет", "Глубокое понимание Python, FastAPI и PostgreSQL", "Опыт работы с Docker"],
   },
   {
     stackTitle: "Аналитика данных",
-    stackDescription: "Сбор, обработка, изучение и интерпретация данных",
+    stackDescription: "Подготовка технических заданий/проектов",
     vacancyName: "Аналитик данных Middle+ / Data Analyst",
-    vacancyAbout:
-      " Уверенное знание SQL (Clickhouse, Postgres, MS SQL) и Python, понимание статистики и применения в АБ тестах, навыки работы с BI-системами (Datalens), умение проводить встречи с заказчиками, снимать бизнес-требования и презентовать результаты",
+    vacancyRequirements: ["Опыт работы от 3х лет", "Глубокое понимание Python, FastAPI и PostgreSQL", "Опыт работы с Docker"],
   },
 ];
 
 for (let i = 0; i < vacancies.length; i++) {
   const vacancyStack = document.createElement("div");
   vacancyStack.classList.add("vacancies-stack");
+  const vacancyReqString = vacancies[i].vacancyRequirements.map((req) => `<li class="vacancy-req">${req}</li>`).join("");
   vacancyStack.innerHTML = `
   <div class="vacancies-stack_titles-block">
           <p class="stack-title">${vacancies[i].stackTitle}</p>
@@ -52,9 +38,9 @@ for (let i = 0; i < vacancies.length; i++) {
         <ul class="vacancies-list-items">
           <li class="vacancies-item">
             <h3>${vacancies[i].vacancyName}</h3>
-            <p class="vacancy-about">
-             ${vacancies[i].vacancyAbout}
-            </p>
+              <ul class='vacancy-req-list'>
+                ${vacancyReqString}
+              </ul>
             <div class="title-content__links hh-link">
               <p class="title-content-link team">hh.ru</p>
               <div class="title-content-link join">
