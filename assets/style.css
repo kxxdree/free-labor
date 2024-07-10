@@ -6,9 +6,10 @@
 
 html {
   scroll-behavior: smooth;
+  font-size: 1vw;
 }
 
-@media (max-width: 1439px) {
+/* @media (max-width: 1439px) {
   html {
     font-size: 1.1vw;
   }
@@ -18,7 +19,7 @@ html {
   html {
     font-size: 1vw;
   }
-}
+} */
 
 body {
   background-color: #fefbff;
