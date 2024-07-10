@@ -41,13 +41,15 @@ for (let i = 0; i < vacancies.length; i++) {
               <ul class='vacancy-req-list'>
                 ${vacancyReqString}
               </ul>
-            <div class="title-content__links hh-link">
-              <p class="title-content-link team">hh.ru</p>
+            <a href='https://t.me/okovale' target='_blank' style='text-decoration: none'>
+            <div class="title-content__links tg-link" style='background-color: #27A6E51A;'>
+              <p class="title-content-link team" style='color: #0988C7'>Telegram</p>
               <div class="title-content-link join">
-                <p>Откликнуться на вакансию</p>
-                <img src="assets/images/join-link.svg" alt="Join" />
+                <p style='color: #0988C7'>Написать по вакансии</p>
+                <img src="assets/images/join-link-tg.svg" alt="Join" style='width: 0.625rem'/>
               </div>
             </div>
+            </a>
           </li>
         </ul>
 `;
